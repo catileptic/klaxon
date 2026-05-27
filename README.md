@@ -1,3 +1,9 @@
+## Introduction
+
+This is a fork of the [Klaxon software](https://github.com/themarshallproject/klaxon), originally pubblished [on GitHub](https://github.com/themarshallproject/klaxon) and developed by [The Marshall Project](https://www.themarshallproject.org/). This fork contains changes to the code that are meant to ammend the software for use within activism and advocacy projects by [Asociația pentru Tehnologie și Internet](https://apti.ro/). The fork is maintained by ApTI staff. You can get in touch with [the organization](https://apti.ro/contact/) or [the maintainer](https://catileptic.tech/about/).
+
+The original `README` is reporduced in full below:
+
 ## Get emailed when a website changes
 
 Klaxon is a free, quick to setup and easy to use service that checks websites for changes so you don't have to. Working with the fine folks at MuckRock and Document Cloud, we have launched an even easier version of Klaxon that requires no server for you to maintain and very little setup. We encourage all new individual users, or anyone who no longer wants to run their own pesky Heroku servers, to use [the new Klaxon Cloud tool](https://www.documentcloud.org/app?q=#add-ons/MuckRock/Klaxon) that is built into [Document Cloud](https://www.documentcloud.org/home), the open document archive for journalists and researchers. 
