@@ -32,6 +32,8 @@ finally, add a cron job that will trigger the checks at specific intervals eg. `
 */10 * * * * docker exec klaxon-deploy_klaxon_1 bundle exec rake check:all
 ```
 
+To test a scrape of all pages that have already been configured in Klaxon, run: `docker exec klaxon-deploy-klaxon-1 bundle exec rake check:all`.
+
 The original `README` is reporduced in full below:
 
 ## Get emailed when a website changes
