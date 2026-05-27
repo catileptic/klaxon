@@ -2,6 +2,36 @@
 
 This is a fork of the [Klaxon software](https://github.com/themarshallproject/klaxon), originally pubblished [on GitHub](https://github.com/themarshallproject/klaxon) and developed by [The Marshall Project](https://www.themarshallproject.org/). This fork contains changes to the code that are meant to ammend the software for use within activism and advocacy projects by [Asociația pentru Tehnologie și Internet](https://apti.ro/). The fork is maintained by ApTI staff. You can get in touch with [the organization](https://apti.ro/contact/) or [the maintainer](https://catileptic.tech/about/).
 
+### Changes
+
+We have added a [docker-compose.yml](https://github.com/catileptic/klaxon/blob/main/docker-compose.yml) file, containing a `klaxon` service and a PostgreSQL database. The user must create an `.env` file (or supply the enviroment variables for these services in another manner). The `.env` could look like this:
+```
+POSTGRES_USER=
+POSTGRES_DB=
+POSTGRES_URL=
+
+SECRET_KEY_BASE=
+POSTGRES_PASS=
+ADMIN_EMAILS=
+
+SMTP_PROVIDER=
+GMAIL_ADDRESS=
+GMAIL_PORT=
+GMAIL_USERNAME=
+GMAIL_PASSWORD=
+GMAIL_DOMAIN=
+```
+
+Make the folder for database persistence with `mkdir pgdata`. Alternatively, you can edit the `docker-compose.yml` file to use named volumes, managed by Docker.
+
+Initial setup involves creating an edmin user. Discover Klaxon's container name using `docker ps` and then run `docker exec -it <container-name> bash`. Add an admin user using the command `bundle exec rake users:create_admin RAILS_ENV=production ADMIN_EMAILS=<your_admin_email>`. In the web UI (accessible at `http://localhost:3001`), enter the admin email and check your inbox for the login link. You should now have access to the administration dashboard.
+
+finally, add a cron job that will trigger the checks at specific intervals eg. `crontab -e`:
+```
+# perform checks every 10 minutes
+*/10 * * * * docker exec klaxon-deploy_klaxon_1 bundle exec rake check:all
+```
+
 The original `README` is reporduced in full below:
 
 ## Get emailed when a website changes
