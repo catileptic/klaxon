@@ -2,6 +2,8 @@
 
 This is a fork of the [Klaxon software](https://github.com/themarshallproject/klaxon), originally pubblished [on GitHub](https://github.com/themarshallproject/klaxon) and developed by [The Marshall Project](https://www.themarshallproject.org/). This fork contains changes to the code that are meant to ammend the software for use within activism and advocacy projects by [Asociația pentru Tehnologie și Internet](https://apti.ro/). The fork is maintained by ApTI staff. You can get in touch with [the organization](https://apti.ro/contact/) or [the maintainer](https://catileptic.tech/about/).
 
+Our deployment is called **FACT VLOP Policy Tracker**.
+
 ### Changes
 
 We have added a [docker-compose.yml](https://github.com/catileptic/klaxon/blob/main/docker-compose.yml) file, containing a `klaxon` service and a PostgreSQL database. The user must create an `.env` file (or supply the enviroment variables for these services in another manner). The `.env` could look like this:
