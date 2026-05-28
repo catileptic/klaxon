@@ -20,6 +20,8 @@ GMAIL_PORT=
 GMAIL_USERNAME=
 GMAIL_PASSWORD=
 GMAIL_DOMAIN=
+
+RAILS_SERVE_STATIC_FILES=True
 ```
 
 Make the folder for database persistence with `mkdir pgdata`. Alternatively, you can edit the `docker-compose.yml` file to use named volumes, managed by Docker.
