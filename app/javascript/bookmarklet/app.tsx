@@ -48,7 +48,7 @@ export function App({ onDismiss, host }: AppProps) {
       )}
       <div class="panel">
         <div class="panel-header">
-          <span class="panel-title">Klaxon</span>
+          <span class="panel-title">FACT VLOP Policy Tracker</span>
           <button class="btn-close" onClick={onDismiss} aria-label="Close">×</button>
         </div>
         <div class="selector-display">

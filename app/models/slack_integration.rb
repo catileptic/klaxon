@@ -40,7 +40,7 @@ class SlackIntegration < ApplicationRecord
     icon_url = URI.join(root_url, "/images/klaxon-logo-100px.png").to_s
 
     payload = {
-      "username": "Klaxon",
+      "username": "FACT VLOP Policy Tracker",
       "icon_url": icon_url,
       "channel": self.channel,
       "text": text
